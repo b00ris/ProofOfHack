@@ -1,0 +1,16 @@
+notifications:
+  email: false
+language: go
+go:
+- 1.9.x
+sudo: false
+dist: trusty
+install:
+- make lint-install
+- make dep
+jobs:
+  include:
+  - stage: Lint
+    script: make lint
+  - stage: Test
+    script: make test

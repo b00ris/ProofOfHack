@@ -7,7 +7,6 @@ sudo: false
 dist: trusty
 install:
 - make lint-install
-- make dep
 jobs:
   include:
   - stage: Lint

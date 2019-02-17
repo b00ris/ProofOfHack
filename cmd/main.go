@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/b00ris/proof_of_hack"
+	"github.com/b00ris/eth_subprotocol_skeleton"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/p2p"
 	"github.com/ethereum/go-ethereum/p2p/discover"
@@ -19,7 +19,7 @@ const maxPeers = 80
 func main() {
 	listenAddr := flag.String("listenaddr", "127.0.0.1:8080", "")
 	flag.Parse()
-	p := proofofhack.ProofOfHack{}
+	p := skeleton.SubProtocol{}
 
 	key, err := crypto.GenerateKey()
 	if err != nil {

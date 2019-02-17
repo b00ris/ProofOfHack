@@ -1,4 +1,4 @@
-package proofofhack
+package skeleton
 
 import (
 	"fmt"
@@ -8,21 +8,21 @@ import (
 	"github.com/ethereum/go-ethereum/p2p"
 )
 
-type ProofOfHack struct{}
+type SubProtocol struct{}
 type Message struct {
 	Text string
 }
 
-func (p *ProofOfHack) Protocol() []p2p.Protocol {
+func (p *SubProtocol) Protocol() []p2p.Protocol {
 	return []p2p.Protocol{{
-		Name:    "ProofOfHack",
+		Name:    "SubProtocol",
 		Version: 1,
 		Length:  1,
 		Run:     p.Handler,
 	}}
 }
 
-func (p *ProofOfHack) Handler(peer *p2p.Peer, ws p2p.MsgReadWriter) error {
+func (p *SubProtocol) Handler(peer *p2p.Peer, ws p2p.MsgReadWriter) error {
 	for {
 		p2p.SendItems(ws, 0, "foo")
 		msg, err := ws.ReadMsg()

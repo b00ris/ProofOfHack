@@ -2,7 +2,7 @@ dep:
 	dep ensure
 
 run:
-	go run cmd/cmd.go
+	go run cmd/main.go
 
 test:
 	go test -v -race ./

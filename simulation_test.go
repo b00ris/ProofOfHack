@@ -1,4 +1,4 @@
-package proofofhack
+package skeleton
 
 import (
 	"crypto/ecdsa"
@@ -14,7 +14,7 @@ func TestSimulation(t *testing.T) {
 	key, _ := ecdsa.GenerateKey(secp256k1.S256(), rand.Reader)
 	key2, _ := ecdsa.GenerateKey(secp256k1.S256(), rand.Reader)
 
-	srv1 := ProofOfHack{}
+	srv1 := SubProtocol{}
 	server1P2P := &p2p.Server{
 		Config: p2p.Config{
 			Name:       "test1",
@@ -29,7 +29,7 @@ func TestSimulation(t *testing.T) {
 		t.Fatalf("Could not start server: %v", err)
 	}
 
-	srv2 := ProofOfHack{}
+	srv2 := SubProtocol{}
 	server2P2P := &p2p.Server{
 		Config: p2p.Config{
 			Name:       "test2",

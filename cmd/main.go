@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/b00ris/eth_subprotocol_skeleton"
+	skeleton "github.com/b00ris/eth_subprotocol_skeleton"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/p2p"
 	"github.com/ethereum/go-ethereum/p2p/discover"
